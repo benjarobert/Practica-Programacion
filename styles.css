@@ -1,0 +1,100 @@
+/* ESTILOS DE LA GALERÍA */
+.galeria {
+    display: flex; /* Activa Flexbox para alinear elementos fácilmente */
+    flex-wrap: wrap; /* Si no hay espacio, las tarjetas bajan a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio de separación entre tarjeta y tarjeta */
+    padding: 30px; /* Espacio interno dentro de la sección completa */
+    background-color: aquamarine; /* Color de fondo (cambialo por el que prefieras) */
+}
+
+/* ESTILOS DEL MENÚ DE NAVEGACIÓN */
+.menu {
+    flex-direction: column; /* Pone los elementos uno debajo del otro */
+    align-items: center; /* Los centra en la pantalla */
+}
+
+/* ESTILOS DE CADA TARJETA INDIVIDUAL */
+.tarjeta {
+    transition: 0.3s; /* Hace que cualquier animación tarde 0.3 segundos (suaviza el efecto hover) */
+}
+
+/* EFECTO AL PASAR EL MOUSE POR LA TARJETA */
+.tarjeta:hover {
+    transform: scale(1.05); /* Agranda la tarjeta un 5% cuando le pasás el mouse por arriba */
+}
+
+/* ESTILOS DE LAS IMÁGENES DENTRO DE LA TARJETA */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho de su tarjeta */
+    height: 200px; /* Altura fija para que todas las imágenes se vean parejas */
+    max-width: 100%; /* Evita que la imagen se desborde */
+    object-fit: cover; /* Recorta la imagen para que llene el cuadro sin deformarse ni estirarse */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+}
+
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+.formulario {
+    width: 400px; /* Ancho fijo del formulario */
+    margin: auto; /* Centra el formulario en la pantalla */
+    display: flex; /* Activa Flexbox adentro del formulario */
+    flex-direction: column; /* Pone los inputs uno debajo del otro */
+    gap: 15px;  /* Espacio de separación entre los inputs */
+    background-color: white; /* Color de fondo del formulario */
+    padding: 30px; /* Espacio interno del formulario */
+    border-radius: 15px; /* Redondea los bordes del formulario completo */
+    box-shadow: 0 0 15px gray; /* Le da una sombra gris alrededor */
+}
+
+/* ESTILOS DE LAS CAJAS DE TEXTO DEL FORMULARIO */
+.formulario input,
+.formulario textarea {
+    padding: 12px;  /* Espacio interno para que el texto no esté pegado al borde */
+    border-radius: 10px; /* Bordes redondeados en las cajitas */
+    border: 1px solid rgb(224, 19, 19); /* Borde de color (cambialo si querés otro color) */
+    font-size: 16px; /* Tamaño de la letra que el usuario escribe */
+}
+
+/* ESTILOS DEL BOTÓN DE ENVIAR */
+.formulario button {
+    background-color: rgb(21, 239, 21); /* Color verde de fondo */
+    color: white; /* Color blanco de la letra */
+    padding: 12px; /* Tamaño del botón */
+    border: none; /* Le saca el borde feo que viene por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Hace que el mouse se ponga como una manito al pasar por arriba */
+    transition: 0.3s; /* Suaviza el cambio de color al pasar el mouse */
+}
+
+/* EFECTO AL PASAR EL MOUSE POR EL BOTÓN */
+.formulario button:hover {
+    background-color: rgb(12, 139, 12); /* Se pone de un verde más oscuro */
+}
+
+
+/* ========================================= */
+/* MEDIA QUERIES (RESPONSIVE PARA CELULARES) */
+/* ========================================= */
+
+/* Todo lo que esté acá adentro solo se aplica si la pantalla mide 768px o menos */
+@media (max-width: 768px) {
+
+    .menu ul {
+        flex-direction: column; /* Apila los links del menú hacia abajo en celulares */
+        align-items: center; /* Los centra */
+    }
+    
+    .galeria {
+        flex-direction: column; /* Apila las tarjetas hacia abajo en vez de estar al lado */
+        align-items: center; /* Las centra */
+        padding: 15px; /* Achica un poco el espacio interno para celulares */
+    }
+
+    .tarjeta { 
+        width: 90%; /* La tarjeta ocupa casi toda la pantalla del celu */
+    }
+
+    .formulario {
+        width: 90%; /* El formulario ocupa casi toda la pantalla del celu */
+    }
+}
