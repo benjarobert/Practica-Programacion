@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html> <!-- Indica que estamos usando HTML5 -->
+<html lang="es"> <!-- Configura el idioma de la página en español -->
+<head>
+    <meta charset="UTF-8"> <!-- Permite usar caracteres especiales como la ñ y los tildes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la web se adapte a celulares -->
+    <title>ACÁ VA EL TÍTULO DE LA PÁGINA (Aparece en la pestaña del navegador)</title>
+
+    <!-- Conecta este archivo HTML con tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="menu">
+        <ul>
+            <!-- Cada <li> es un elemento de la lista. El href indica a dónde te lleva el link -->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li> <!-- Cambiar el '#' por el link real si lo hay -->
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li> <!-- Este link te lleva a la sección con id="contacto" -->
+        </ul>
+    </nav>
+
+    <!-- SECCIÓN DE GALERÍA -->
+    <section>
+        <h2>ACÁ VA EL TÍTULO DE LA SECCIÓN (Ej: Nuestra Galería)</h2>
+
+        <!-- Contenedor principal de todas las tarjetas -->
+        <div class="galeria">
+<!-- TARJETA 1 -->
+                <div class="tarjeta">
+                    <!-- En src va la ruta de la imagen. En alt va una descripción por si no carga la imagen -->
+                    <img src="./ruta-de-tu-imagen-1.jpg" alt="Descripción de la imagen 1">
+                    <h3>TÍTULO DE LA TARJETA 1</h3>
+                    <p>Acá va el texto descriptivo de esta tarjeta.</p>
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="tarjeta">
+                    <img src="./ruta-de-tu-imagen-2.jpg" alt="Descripción de la imagen 2">
+                    <h3>TÍTULO DE LA TARJETA 2</h3>
+                    <p>Acá va el texto descriptivo de esta tarjeta.</p>
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="tarjeta">
+                    <img src="./ruta-de-tu-imagen-3.jpg" alt="Descripción de la imagen 3">
+                    <h3>TÍTULO DE LA TARJETA 3</h3>
+                    <p>Acá va el texto descriptivo de esta tarjeta.</p>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <!-- El id="contacto" permite que el link de arriba baje directamente hasta acá -->
+    <section id="contacto">
+        <h2>ACÁ VA EL TÍTULO DE CONTACTO (Ej: Escribinos)</h2>
+
+        <!-- El formulario -->
+        <form class="formulario">
+            <!-- input tipo texto para nombres -->
+            <input type="text" placeholder="ACÁ VA EL TEXTO DE AYUDA (Ej: Ingrese su nombre)">
+            <!-- input tipo email para correos (valida que tenga un @) -->
+            <input type="email" placeholder="ACÁ VA EL TEXTO DE AYUDA (Ej: Ingrese su email)">
+            <!-- textarea es una caja de texto más grande para mensajes -->
+            <textarea placeholder="ACÁ VA EL TEXTO DE AYUDA (Ej: Ingrese un mensaje)"></textarea>
+<!-- Botón para enviar el formulario -->
+            <button type="submit">TEXTO DEL BOTÓN (Ej: Enviar)</button>
+        </form>
+    </section>
+
+    <!-- Conecta tu archivo de JavaScript (Opcional, si te lo piden, ponelo justo antes de cerrar el body) -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html> 
